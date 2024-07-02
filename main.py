@@ -284,6 +284,7 @@ while running:
             #Handle Title Screen buttons
             if gamestate == "title":
                 if play_hitbox.collidepoint(event.pos):
+                    current_level, level_solutions = level_generate()
                     gamestate = "game"
                     sound_effects[0].play()
                     boxes = [Box(50 + i * 200, 100 + v * 100, current_level[i][v]) for i in range(4) for v in range(4)]
