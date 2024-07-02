@@ -245,7 +245,7 @@ debug_text = "Enter single catergories seperated by commas until the generate bu
 input_text = ""
 player_lives = 4
 player_selection = []
-version_number = "V1.0.1"
+version_number = "V1.0.2"
 version_levels = 5
 running = True
 Jukebox(0)
