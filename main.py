@@ -207,7 +207,7 @@ def Custom_Level():
     global generate_hitbox
 
     title_logo = pygame.transform.scale(pygame.image.load("Contents/Interface/title.png").convert_alpha(), (400, 75))
-    top_infobox = pygame.draw.rect(screen, ("#6c7a42"), (240, 125, 400, 60), 0, 3)
+    top_infobox = pygame.draw.rect(screen, ("#6c7a42"), (165, 125, 550, 60), 0, 3)
     message_infobox = pygame.draw.rect(screen, ("#6c7a42"), (240, 200, 400, 60), 0, 3)
     type_infobox = pygame.draw.rect(screen, ("#6c7a42"), (130, 240, 620, 85), 0, 3)
     debug_infobox = pygame.draw.rect(screen, ("#6c7a42"), (100, 400, 680, 100), 0, 3)
@@ -222,12 +222,12 @@ def Custom_Level():
 
 
     screen.blit(font_h1.render("Custom Connections Creator", True, (255,255,255)), (285, 125))
-    screen.blit(font.render("Input categories seperated by commas", True, (255,255,255)), (310, 150))
+    screen.blit(font.render("Input 5 categories one by one, seperated by commas, hit enter to submit", True, (255,255,255)), (185, 150))
     screen.blit(font_h1.render("Input Categories Here!", True, (255, 255, 255)), (320, 205))
     screen.blit(font_h1.render(input_text, True, (0,0,0)), (150, 250))
     screen.blit(font_h1.render("Debug Info:", True, (0,0,0)), (140, 365))
     screen.blit(font.render(debug_text, True, (0,0,0)), (120, 410))
-    screen.blit(font.render("Correct submission are formatted: item1,item2,item3,item4,categoryname", True, (0,0,0)), (175, 465))
+    screen.blit(font.render("Correct submissions are formatted: item1,item2,item3,item4,categoryname", True, (0,0,0)), (175, 465))
     screen.blit(font.render("Clear Custom Cache", True, (255,255,255)), (175, 565))
     screen.blit(font.render("Generate Puzzle", True, (255,255,255)), (580, 565))
     pygame.draw.rect(screen, (0,0,0), (140, 250, 600, 60), 5)
@@ -245,7 +245,7 @@ debug_text = "Enter single catergories seperated by commas until the generate bu
 input_text = ""
 player_lives = 4
 player_selection = []
-version_number = "V1.0.2"
+version_number = "V1.0.5"
 version_levels = 5
 running = True
 Jukebox(0)
@@ -341,8 +341,13 @@ while running:
     #Collect end cases
     if player_lives == 0:
         player_lives = 4
+        solved = 0
+        player_selection.clear()
+        clicks = 0
         Jukebox(0)
         gamestate = "title"
+        
+
 
     if solved == 4:
         gamestate = "title"
