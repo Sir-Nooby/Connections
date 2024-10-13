@@ -23,5 +23,7 @@ Any error messages that occur will inform you of the problem, in which you will 
 A basic rundown of the errors are:
 
 ERROR 1: The user placed less than five entries before submitting the current category.
+
 ERROR 2: The user tried to generate more than 4 categories.
+
 ERROR 3: The user generated the puzzle before inputting all four categories.
