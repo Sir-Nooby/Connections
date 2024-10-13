@@ -1,7 +1,9 @@
 NYT's Connections remade in Python using PyGame
+
 Guess common words in categories in fours.
 
 [Singleplayer]
+
 Click on each word you want to select and hit submit.
 A mistake will remove one of your lives located on the bottom of the screen.
 A correct guess will change the color of the selected entries, and make them unselectable.
@@ -9,6 +11,7 @@ The game is won when all four categories are guessed correctly.
 During a win or a loss, the game will reset back to the title screen.
 
 [Custom]
+
 To create a custom game, follow instructions on the screen.
 
 To correctly input categories, input each category as such:
